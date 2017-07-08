@@ -34,7 +34,7 @@
 
      **Step 1. Get the instance of SimpleTimerTaskHandler**
 
-        ` SimpleTimerTaskHandler handler = SimpleTimerTaskHandler.getInstance();`
+        SimpleTimerTaskHandler handler = SimpleTimerTaskHandler.getInstance();
 
      ​
 
@@ -145,14 +145,14 @@
    Default constructor  associates this task.
 
    ```Java
-   public SimpleTimerTask();
+   SimpleTimerTask();
    ```
 
 
    Constructor associates this task change its task type from default to loop, and sets the loop interval.
 
    ```Java
-   public SimpleTimerTask(long loopInterval);
+   SimpleTimerTask(long loopInterval);
    ```
 
       
