@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SimpleTimerTaskHandler</string>
+    <string name="hello">Hello SimpleTimerHandler!\nPlease Check Logs!</string>
+</resources>
