@@ -34,7 +34,7 @@
 
      **Step 1. Get the instance of SimpleTimerTaskHandler**
 
-     ` SimpleTimerTaskHandler handler = SimpleTimerTaskHandler.getInstance();`
+     `SimpleTimerTaskHandler handler = SimpleTimerTaskHandler.getInstance();`
 
      ​
 
