@@ -1,11 +1,11 @@
 # SimpleTimerTaskHandler
-- A simple timer task handler based on android.os.Handler - You can decide when to execute tasks.
-- Author: Luo Guowen 
-- Email: <a href="#">luoguowen123@qq.com</a>
+- 一个基于android.os.Handler的简单定时任务处理器 - 你可以决定什么时候执行任务.
+- 作者: Luo Guowen 
+- 邮箱: <a href="#">luoguowen123@qq.com</a>
 
-* ### Setup
+* ### 设置
 
-  **Step 1. Add the JitPack repository to your build file Add it in your root build.gradle at the end of repositories:**
+  **Step 1. 添加JitPack到你的Project的build.gradle::**
 
   ```groovy
   	allprojects {
@@ -18,7 +18,7 @@
 
   ​
 
-  **Step 2. Add the dependency：**
+  **Step 2. 添加依赖：**
 
   ```groovy
   	dependencies {
@@ -30,15 +30,15 @@
 
 
 
-* ### Usage
+* ### 使用方法
 
-     **Step 1. Get the instance of SimpleTimerTaskHandler**
+     **Step 1. 获取到SimpleTimerTaskHandler的对象**
 
      `SimpleTimerTaskHandler handler = SimpleTimerTaskHandler.getInstance();`
 
      ​
 
-     **Step 2. Create your task**
+     **Step 2. 创建你的任务**
 
      ```Java
      SimpleTimerTask task = new SimpleTimerTask() {
@@ -60,75 +60,75 @@
              };
      ```
 
-     ​	*Tip: the task will be a loop task once you use the second constructor.*
+     ​	*温馨提示: 一旦使用了第二个构造，任务将会变成循环任务.*
 
      ​
 
-     **Step 3. Execute your task by using SimpleTimerTaskHandler**
+     **Step 3. 用SimpleTimerTaskHandler来执行你的任务**
 
-     Execute real-time task
+     执行即时任务
 
      ```Java
      void sendTask(int taskNum, SimpleTimerTask task); 
      ```
 
-     Execute delay task
+     执行延时任务。
 
      ```java
      void sendTaskDelayed(int taskNum, SimpleTimerTask task, long delayMillis);
      ```
 
-     Execute timer task, accurate to hour.
+     执行定时任务, 精确到小时。
 
      ```java
      void sendTimerTask(int taskNum, SimpleTimerTask task, int hour); 
      ```
 
-     Execute timer task, accurate to minute.
+     执行定时任务, 精确到分。
 
      ```java
      void sendTimerTask(int taskNum, SimpleTimerTask task, int hour, int minute); 
      ```
 
-     Execute timer task, accurate to second.
+     执行定时任务, 精确到秒。
      ```java
      void sendTimerTask(int taskNum, SimpleTimerTask task, int hour, int minute, int second); 
      ```
 
      ​
 
-* ### Params: 
+* ### 参数: 
 
-   Task id, eg: 0, 1, 2...
+   任务编号, eg: 0, 1, 2...
 
    ```Java
    int taskNum;
    ```
 
-   The task you want to execute.
+   需要执行的任务。
 
    ```java
    SimpleTimerTask task;
    ```
 
-   The hour to execute this task, based on the day.
+   执行任务的某一小时时刻, 基于当天.
 
    ```java
    int hour
    ```
-   The minute in the hour, based on the day.
+   执行任务的某一小时内的分钟时刻, 基于当天.
 
    ```java
    int minute
    ```
 
-   The seconds in the minute, based on the day.
+   执行任务的某一小时内某一分钟内的秒数时刻, 基于当天.
 
    ```java
    int second
    ```
 
-   *e.g.: If you want execute a task at 13:50:30, you can invoke*
+   *例: 如果你想在 13:50:30 时执行一个任务, 可以想下面一样调用*
 
    ```java
    handler.void sendTimerTask(task num, task, 13, 50, 30);
@@ -136,20 +136,20 @@
 
 * ### SimpleTimerTask:
 
-   Must use SimpleTimerTaskHandler and SimpleTimerTask together.
+   SimpleTimerTaskHandler 和 SimpleTimerTask 必须搭配使用.
 
    ​
 
-   **Public constructors**
+   **公共构造**
 
-   Default constructor  associates this task.
+   任务的默认构造。
 
    ```Java
    SimpleTimerTask();
    ```
 
 
-   Constructor associates this task change its task type from default to loop, and sets the loop interval.
+   带参的任务构造将任务类型从默认变为循环并设置循环间隔。
 
    ```Java
    SimpleTimerTask(long loopInterval);
@@ -161,6 +161,6 @@
 
 * ### Tips：
 
-  - The task number of every task should be different if there are more than one tasks.
-  - You`d better use a work Thread or AsyncTask to do some long time operations, e.g: network request.
-  - You can do UI operation in the task
+  - 当任务数超过一个时，每个任务的任务编号都应不同
+  - 进行耗时操作时最好启动一个异步线程或者使用AsyncTask, 例: 网络请求.
+  - 可以在任务里操作UI
