@@ -44,7 +44,7 @@
      SimpleTimerTask task = new SimpleTimerTask() {
                  @Override
                  public void run() {
-                   // Do what you whant
+                   // Do what you want
                  }
              };
      ```
@@ -55,7 +55,7 @@
       SimpleTimerTask loopTask = new SimpleTimerTask(loop interval) {
                  @Override
                  public void run() {
-                   // Do what you whant
+                   // Do what you want
                  }
              };
      ```
