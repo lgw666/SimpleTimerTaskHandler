@@ -134,7 +134,7 @@
    *e.g.: If you want execute a task at 13:50:30, you can invoke*
 
    ```java
-   handler.void sendTimerTask(task num, task, 13, 50, 30);
+   handler.sendTimerTask(task num, task, 13, 50, 30);
    ```
 
 * ### SimpleTimerTask:
