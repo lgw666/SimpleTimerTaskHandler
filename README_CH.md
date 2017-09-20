@@ -128,7 +128,7 @@
    int second
    ```
 
-   *例: 如果你想在 13:50:30 时执行一个任务, 可以想下面一样调用*
+   *例: 如果你想在 13:50:30 时执行一个任务, 可以像下面一样调用*
 
    ```java
    handler.void sendTimerTask(task num, task, 13, 50, 30);
