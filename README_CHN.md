@@ -1,7 +1,7 @@
 # SimpleTimerTaskHandler
 - 一个基于android.os.Handler的简单定时任务处理器 - 你可以决定什么时候执行任务.
 - 作者: Luo Guowen 
-- 邮箱: <a href="#">luoguowen123@qq.com</a>
+- 邮箱: luoguowen123@qq.com
 
 * ### 设置
 
