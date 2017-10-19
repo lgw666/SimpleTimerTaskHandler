@@ -5,7 +5,7 @@
 
 * ### 设置
 
-  **Step 1. 添加JitPack到你的Project的build.gradle::**
+  **Step 1. 添加JitPack到你的Project的build.gradle:**
 
   ```groovy
   	allprojects {
