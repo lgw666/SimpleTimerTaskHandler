@@ -1,6 +1,6 @@
 # SimpleTimerTaskHandler
 
-  ### [中文版]( https://github.com/lgw666/SimpleTimerTaskHandler/blob/master/README_CH.md)
+  ### [中文版]( https://github.com/lgw666/SimpleTimerTaskHandler/blob/master/README_CHN.md)
 
 - A simple timer task handler based on android.os.Handler - You can decide when to execute tasks.
 - Author: Luo Guowen 
